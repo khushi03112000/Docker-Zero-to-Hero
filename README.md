@@ -4,6 +4,34 @@
 
 You can watch the video version of this repo on my youtube playlist. -> https://www.youtube.com/watch?v=7JZP345yVjw&list=PLdpzxOOAlwvLjb0vTD9BXLOwwLD_GWCmC
 
+Yes, exactly! Let’s break it down:  
+
+### **1️⃣ EC2 OS is Created Through Virtualization**
+- **AWS uses a hypervisor (Nitro or Xen)** to create EC2 instances.  
+- When you launch an EC2 instance, it's actually a **virtual machine** running on AWS’s **physical server**.  
+- The OS inside the EC2 instance (e.g., Ubuntu, Amazon Linux, Windows) is a **guest OS** created via virtualization.  
+
+### **2️⃣ Docker Containers Use the EC2 OS Directly**  
+- When you install **Docker on an EC2 instance**, the containers **share the EC2 instance’s OS kernel**.  
+- **No separate OS is created for each container** (unlike a VM).  
+- Containers run as **isolated processes** on the EC2 OS, making them lightweight.  
+
+### **3️⃣ Summary: How It Works**  
+
+| **Layer**               | **Technology Used** |
+|------------------------|------------------|
+| **AWS Physical Server** | Runs on actual hardware. |
+| **Hypervisor (Nitro/Xen)** | Creates EC2 virtual machines. |
+| **EC2 Instance (VM)** | A virtualized OS (e.g., Ubuntu, Amazon Linux). |
+| **Docker Daemon** | Runs on the EC2 instance OS. |
+| **Docker Containers** | Share the EC2 OS kernel, running isolated processes. |
+
+### **4️⃣ Key Takeaways**  
+✅ **EC2 OS is virtualized by AWS using a hypervisor.**  
+✅ **Docker containers run directly on the EC2 OS, NOT on a separate virtualized layer.**  
+✅ **EC2 instances are like VMs, but Docker containers are lightweight processes.**  
+
+Would you like a **diagram or practical example** to clarify this further? 🚀
 
 ## What is a container ?
 

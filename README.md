@@ -1,11 +1,3 @@
-# Repo to learn Docker with examples. Contributions are most welcome.
-
-## If you found this repo useful, give it a STAR 🌠
-
-You can watch the video version of this repo on my youtube playlist. -> https://www.youtube.com/watch?v=7JZP345yVjw&list=PLdpzxOOAlwvLjb0vTD9BXLOwwLD_GWCmC
-
-Yes, exactly! Let’s break it down:  
-
 ### **1️⃣ EC2 OS is Created Through Virtualization**
 - **AWS uses a hypervisor (Nitro or Xen)** to create EC2 instances.  
 - When you launch an EC2 instance, it's actually a **virtual machine** running on AWS’s **physical server**.  
@@ -103,9 +95,9 @@ To provide a better picture of files and folders that containers base images hav
 
     System calls: The host's kernel handles system calls from the container, which is how the container accesses the host's resources, such as CPU, memory, and I/O.
 
-    Namespaces: Docker containers use Linux namespaces to create isolated environments for the container's processes. Namespaces provide isolation for resources such as the file system, process ID, and network.
+    **Namespaces**: Docker containers use Linux namespaces to create isolated environments for the container's processes. Namespaces provide isolation for resources such as the file system, process ID, and network.
 
-    Control groups (cgroups): Docker containers use cgroups to limit and control the amount of resources, such as CPU, memory, and I/O, that a container can access.
+    **Control groups (cgroups)**: Docker containers use cgroups to limit and control the amount of resources, such as CPU, memory, and I/O, that a container can access.
     
 ```
 

@@ -1,4 +1,4 @@
-# Docker Volumes
+# Docker Volumes (read this from copy notes also)
 
 ## Problem Statement
 
@@ -136,7 +136,9 @@ docker run -d --name report-job -v report_storage:/reports cronjob-image
 | Stored In | Any path on the host | Managed by Docker |
 | Performance | Slower | Optimized for Docker |
 | Best For | Accessing specific host files | Storing persistent app data |
-| Example | Logs (`/var/log/nginx`) | Database (`backend_data`) |
+| Example | Logs (`/var/log/nginx`) Useful when direct access to host files req ex : syncing logs| Database (`backend_data`) Useful when persistent data storage irrespective of host path req |
+| Duration | File persist as long as they exist on OS Host | Managed by Docker hence survives container deletion
+| Mounted On | Host Directory | Volume Storage can be anywhere on same host, diff host, S3 anywhere
 
 ---
 
